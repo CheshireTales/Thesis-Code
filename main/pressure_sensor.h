@@ -15,8 +15,8 @@ class psensors
     psensors(int level);
     ~psensors() {};
     void set_reading(int s_id, int reading);
-    std::array<int,5> get_reading();
-    void set_binary();
-    std::array<int,5> get_binary();
+    std::array<int,5> get_reading(); // Get array of raw values
+    void set_binary(); // Use raw values to get binary values by checking against threshold for given level
+    std::array<int,5> get_binary(); // Get binary array to calculate output sound
     int get_level();
 }
